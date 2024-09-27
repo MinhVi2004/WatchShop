@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="IMG/favicon.ico">
+    <link rel="stylesheet" href="styleCart.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Cart</title>
+</head>
+<body id="body-cart" onload="showTimeNowCart()">
+    <div id="messenger-floating">
+		<a href="https://m.me/duog.dai.quy.21/"><i class="fa-brands fa-facebook-messenger"></i></a>
+	</div>
+    <div id="time-now"></div>
+    <h1>Giỏ Hàng</h1>
+    <div id="close-button" onclick="goToHomePage()">Trang chủ</div>
+    <div id="cart-div">
+        <div id="cart-list">
+            <table >
+                <thead>
+                    <tr>
+                        <th>Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Dữ liệu sản phẩm trong giỏ hàng sẽ được thêm vào đây -->
+                </tbody>
+            </table>
+        </div>
+        <div id="cart-summary">
+            <p>Tổng số sản phẩm: <span id="total-items">0</span></p>
+            <p>Tổng tiền: <span id="total-price">0</span></p>
+            <button id="checkout-button" onclick="createOrder()">Mua hàng</button>
+            <button id="check-order" onclick="displayOrderInfo()">Xem đơn hàng đã đặt</button>
+        </div>
+    </div>
+    
+
+    <div id="order-info" style="display: none">
+        <h2>Thông tin đơn hàng</h2>
+        <table id="order-items">
+            
+            <!-- Dữ liệu đơn hàng của khách hàng sẽ được hiển thị tại đây -->
+        </table>
+        <div id="order">
+            <button id="cart-page" onclick="goToCartPage()">Quay lại giỏ hàng</button>
+        </div>
+    </div>
+    <div id="create-order-modal" style="display: none;">
+        <div id="create-order">
+            
+        </div>
+    </div>
+    <div id="customalert"></div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
