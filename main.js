@@ -422,7 +422,7 @@ function createAdmin() {
         var admin = {
               username: 'admin',
               password: 'admin',
-              fullname: 'Admin Nhóm 13',
+              fullname: 'Minh Vi',
               phone:'0333444555',
               address:"sgu quận 5",
               email:'admin@gmail.com',
