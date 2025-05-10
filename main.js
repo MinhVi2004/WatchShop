@@ -1156,11 +1156,11 @@ function buy() {
 function createSlideShowArray() {
   if(localStorage.getItem('slideshow') == null) {
         let slideShowArray = [
-              {slideShowID : 0, img : "https://gshock.casio.com/content/casio/locales/intl/en/brands/gshock/products/type/full-metal/full-metal/_jcr_content/root/responsivegrid/container_copy/teaser.casiocoreimg.jpeg/1696484105376/pc-w1920h816-notext.jpeg"},
-              {slideShowID : 1, img : "https://www.casio.com/content/casio/locales/vn/vi/products/_jcr_content/root/responsivegrid/container_1450128435/carousel_copy_copy/item_1666757450765.casiocoreimg.jpeg/1678149735817/banner-gbd-h2000-pc.jpeg"},
-              {slideShowID : 2, img : "https://gshock.casio.com/content/casio/locales/intl/en/brands/gshock/_jcr_content/root/responsivegrid/container/image_134798053.casiocoreimg.jpeg/1701659554898/kv-1920x816.jpeg"},
-              {slideShowID : 3, img : "https://www.casio.com/content/casio/locales/vn/vi/products/_jcr_content/root/responsivegrid/container_1450128435/carousel_copy_copy/item_1661475191255_c.casiocoreimg.gif/1680758447683/pc-gshock-40th-banner-1920-816-01.gif"},
-              {slideShowID : 4, img : "https://gshock.casio.com/content/casio/locales/intl/en/brands/gshock/_jcr_content/root/responsivegrid/container/image_1170766954_cop.casiocoreimg.jpeg/1701659554962/pc-w1920h816-logo.jpeg"},
+              {slideShowID : 0, img : "1.png"},
+              {slideShowID : 1, img : "2.png"},
+              {slideShowID : 2, img : "3.png"},
+              {slideShowID : 3, img : "4.png"},
+              {slideShowID : 4, img : "5.png"},
         ];
         localStorage.setItem('slideshow',JSON.stringify(slideShowArray));
   } 
@@ -1177,7 +1177,7 @@ function moveSlideShow(slideShowImg_id) {
   } else if(index < 0) {
         index = numSlides - 1;
   }
-  slideShow.innerHTML = '<img src="'+slideShowArray[index].img+'" alt="">';
+  slideShow.innerHTML = '<img src="SlideShow/'+slideShowArray[index].img+'" alt="">';
   countDown = setTimeout(function() {
         moveSlideShowAfter(slideShowImg_id);
   },2000)
